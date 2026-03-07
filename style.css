@@ -1,0 +1,141 @@
+/* Подключаем красивый шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Основные стили для страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffe4e9, #fff0f3);
+    /* Градиентный фон */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #5e3a4b;
+    /* Тёмно-розовый цвет для текста */
+}
+
+/* Шапка сайта */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/* Секция с цветочком */
+.zvetochki {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.zvetochki img {
+    max-width: 300px;
+    /* Ограничим размер */
+    width: 100%;
+    border-radius: 20px;
+    /* Скругленные уголки */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    /* Плавное изменение размера */
+}
+
+/* Эффект при наведении на картинку */
+.zvetochki img:hover {
+    transform: scale(1.05);
+    /* Увеличение на 5% */
+}
+
+/* Стили для карточек */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Полупрозрачный белый */
+    backdrop-filter: blur(5px);
+    /* Эффект матового стекла */
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+    text-align: center;
+    min-width: 150px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #b34167;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Кнопка */
+button {
+    background-color: #ffb6c1;
+    border: 2px solid white;
+    color: #5e3a4b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.6);
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #ff9eb5;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+}
+
+/* Стиль для сюрприза */
+.surprize {
+    margin: 20px 0 30px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #b34167;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgba(255, 240, 245, 0.8);
+    border: 2px dashed #ffb6c1;
+    opacity: 0;
+    /* Изначально скрыт */
+    transition: opacity 0.5s ease;
+    max-width: 80%;
+}
+
+/* Класс, который будет добавляться скриптом для показа сюрприза */
+.surprize.show {
+    opacity: 1;
+}
